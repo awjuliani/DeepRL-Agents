@@ -11,7 +11,7 @@ The repository currently contains the following algorithms:
 * **Contextual-Policy** - An implementation of policy gradient method for stateful environments such as contextual bandit problems.
 * **Policy-Network** - An implementation of a neural network policy-gradient agent that solves full RL problems with states and delayed rewards, and two opposite actions (ie. CartPole or Pong).
 * **Vanilla-Policy** - An implementation of a neural network vanilla-policy-gradient agent that solves full RL problems with states, delayed rewards, and an arbitrary number of actions.
-* **Model-Network** - An addition to the Policy-Network algorithm which includes a separate network which models the environemtns dynamics.
+* **Model-Network** - An addition to the Policy-Network algorithm which includes a separate network which models the environment dynamics.
 * **Double-Dueling-DQN** - An implementation of a Deep-Q Network with the Double DQN and Dueling DQN additions to improve stability and performance.
 * **Deep-Recurrent-Q-Network** - An implementation of a Deep Recurrent Q-Network which can solve reinforcement learning problems involving partial observability.
 * **Q-Exploration** - An implementation of DQN containing multiple action-selection strategies for exploration. Strategies include: greedy, random, e-greedy, Boltzmann, and Bayesian Dropout.
