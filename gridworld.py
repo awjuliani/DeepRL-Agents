@@ -120,9 +120,9 @@ class gameEnv():
         reward,done = self.checkGoal()
         state = self.renderEnv()
         if reward == None:
-            print done
-            print reward
-            print penalty
+            print(done)
+            print(reward)
+            print(penalty)
             return state,(reward+penalty),done
         else:
             return state,(reward+penalty),done
