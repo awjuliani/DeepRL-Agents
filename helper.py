@@ -13,11 +13,11 @@ def processState(state1):
     return np.reshape(state1,[21168])
     
 #These functions allows us to update the parameters of our target network with those of the primary network.
-def updateTargetGraph(tfVars):
+def updateTargetGraph(tfVars,tau):
     total_vars = len(tfVars)
     op_holder = []
     for idx,var in enumerate(tfVars[0:total_vars/2]):
-        op_holder.append(tfVars[idx+total_vars/2].assign(var.value()))
+        op_holder.append(tfVars[idx+total_vars//2].assign((var.value()*tau) + ((1-tau)*tfVars[idx+total_vars//2].value())))
     return op_holder
 
 def updateTarget(op_holder,sess):
