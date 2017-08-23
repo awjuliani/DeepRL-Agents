@@ -27,9 +27,9 @@ def updateTarget(op_holder,sess):
     a = tf.trainable_variables()[0].eval(session=sess)
     b = tf.trainable_variables()[total_vars//2].eval(session=sess)
     if a.all() == b.all():
-        print "Target Set Success"
+        print("Target Set Success")
     else:
-        print "Target Set Failed"
+        print("Target Set Failed")
         
 #Record performance metrics and episode logs for the Control Center.
 def saveToCenter(i,rList,jList,bufferArray,summaryLength,h_size,sess,mainQN,time_per_step):
